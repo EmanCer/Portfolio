@@ -1,0 +1,31 @@
+nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 30px 50px
+    ul
+        font-size: 1.5
+        display: flex
+
+        li
+            padding-left: 50px
+
+            a
+                position: relative
+                color: $light-primary
+                text-decoration: none
+                text-transform: uppercase
+            a:after
+                content: ''
+                position: absolute
+                background-color: $secondary
+                height: 3px
+                width: 0
+                left: 0
+                bottom: -.5em
+            a:hover
+                color: $secondary
+            a:hover:after
+                width: 100%
+                transition: all 0.5s
+                color: $secondary
