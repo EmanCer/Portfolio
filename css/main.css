@@ -1,66 +1,241 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap");
-*, *::before, *::after {
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   background: #27292c;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
 }
 
-.dark-theme {
+a {
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+header .navbar {
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .navbar .nav-link {
+  text-decoration: none;
+  color: #b8b5b5;
+  font-size: 0.9rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+header .navbar .nav-link:after {
+  content: '';
+  position: absolute;
+  background-color: #fa923c;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -.5em;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+header .navbar .nav-link:hover {
   color: #fa923c;
 }
 
-.light-theme {
-  background: #d6d6d6;
-  color: #27292c;
+header .navbar .nav-link:hover:after {
+  width: 100%;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  color: #fa923c;
 }
 
-.unstyled-list {
-  margin: 0;
-  padding: 0;
+header .navbar .logo {
+  font-size: 1.5rem;
+}
+
+header .navbar .logo a {
+  color: #fa923c;
+}
+
+header .navbar .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+header .navbar .links li {
   list-style: none;
 }
 
-.section {
-  padding: 8rem 0;
+@media (max-width: 800px) {
+  header .navbar .main-nav {
+    opacity: 0;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    width: 300px;
+    height: 250px;
+    margin-left: -150px;
+    background: rgba(255, 255, 255, 0.151);
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+    border-radius: 10px;
+  }
+  header .navbar .open {
+    opacity: 1;
+  }
+  header .navbar .open .links {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .navbar .open .links li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0 0 .75em;
+header .navbar .languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100px;
 }
 
-h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child {
-  margin: 0;
+header .navbar .languages .lang {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: solid #b8b5b5 2px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  -webkit-transition: scale 0.5s;
+  transition: scale 0.5s;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: 3px;
+header .navbar .languages .lang:hover {
+  scale: 1.20;
 }
 
-h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
+header .navbar .languages .it-lang {
+  background-image: url(https://www.worldometers.info/img/flags/it-flag.gif);
 }
 
-h3 {
+header .navbar .languages .en-lang {
+  background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif);
+}
+
+header .navbar .languages .selected-lang {
+  border: solid #fa923c 3px;
+}
+
+header .navbar .toggle-btn {
+  color: #fa923c;
   font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  cursor: pointer;
+  display: none;
 }
 
-.btn {
+@media (max-width: 800px) {
+  header .navbar .toggle-btn {
+    position: absolute;
+    top: 18px;
+    left: 49%;
+    display: block;
+  }
+}
+
+.section-hero {
+  width: 90%;
+  margin: auto;
+  padding: 8rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #b8b5b5;
+}
+
+.section-hero .hero-text {
+  padding: 40px 20px;
+}
+
+.section-hero .hero-text .accent {
+  color: #e7dddd;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+}
+
+.section-hero .hero-text .accent:hover {
+  background: #fa923c;
+  color: #27292c;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.section-hero .hero-text h1 {
+  padding-bottom: 30px;
+}
+
+.section-hero .hero-text p {
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+.section-hero .hero-text .btn-section {
+  padding-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-hero .hero-text .btn-section button {
+  margin-right: 50px;
+}
+
+.section-hero .hero-text .btn-section .btn {
   padding: .75em 2.5em;
   min-width: 250px;
   font-size: 1.2em;
@@ -70,149 +245,9 @@ h3 {
   border-radius: 5px;
 }
 
-.btn:hover, .btn:focus {
+.section-hero .hero-text .btn-section .btn:hover, .section-hero .hero-text .btn-section .btn:focus {
   background: #fa923c;
   color: #27292c;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 30px 50px;
-}
-
-nav ul {
-  font-size: 1.5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav ul li {
-  padding-left: 50px;
-}
-
-nav ul li a {
-  position: relative;
-  color: #d6d6d6;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-nav ul li a:after {
-  content: '';
-  position: absolute;
-  background-color: #fa923c;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -.5em;
-}
-
-nav ul li a:hover {
-  color: #fa923c;
-}
-
-nav ul li a:hover:after {
-  width: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  color: #fa923c;
-}
-
-.hero {
-  width: 80%;
-  margin: auto;
-  padding: 8rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.hero .hero-text {
-  width: 60%;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.hero .hero-text .accent {
-  color: #e7dddd;
-}
-
-.hero .hero-text p {
-  width: 80%;
-  margin: auto;
-  font-size: 1.4rem;
-}
-
-.hero .hero-img {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.hero .hero-img img {
-  border-radius: 10px;
-  width: 80%;
-}
-
-.call-to-action {
-  margin: 50px auto 0;
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.about-section {
-  width: 70%;
-  margin: auto;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  text-align: justify;
-}
-
-.icons {
-  padding: 2rem;
-}
-
-.icons p {
-  text-align: center;
-  padding-bottom: 1.5rem;
-  font-size: 1.3em;
-}
-
-.icons ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.icons ul li {
-  text-align: center;
-}
-
-.icons i {
-  font-size: 3rem;
 }

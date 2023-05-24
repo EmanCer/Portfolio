@@ -1,134 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/2b081d89c9.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <nav class="dark-theme">
-        <div class="nav-logo">
-          <h3>&lt;ec&gt;</h3>
+    <title>Portfolio</title>
+</head>
+<body>
+        <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">&lt;ec&gt;</a></div>
+            <div class="main-nav">
+                <ul class="links">
+                    <li><a href="hero" class="nav-link">Home</a></li>
+                    <li><a href="about" class="nav-link">About</a></li>
+                    <li><a href="projects" class="nav-link">Projects</a></li>
+                    <li><a href="contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="languages">
+                <div class="lang selected-lang en-lang">
+                    <a href="" class="action-btn en-btn"></a>
+                </div>
+                <div class="lang it-lang">
+                    <a href="" class="action-btn it-btn"></a>
+                </div>
+            </div>
+            <div class="toggle-btn"><i class="fa-solid fa-bars"></i></div>
         </div>
-        <div class="nav-main">
-          <ul class="unstyled-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
     </header>
-    <div id="home" class="main">
-      <div class="hero dark-theme">
-        <div class="hero-text">
-          <h1>Hi! I'm Emanuele<br><span class="accent">Front-end Developer</span></h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quod quisquam, incidunt fuga eligendi esse totam officiis, dolor illo eum rerum veritatis eos aliquid a commodi. Nulla ullam aperiam et.</p>
-          <div class="call-to-action">
-            <button class="btn">Learn more</button>
-            <button class="btn">See my Projects</button>
-          </div>
-          
+    <div class="main">
+
+        <div class="section section-hero">
+            <div class="hero-text">
+                <h1>Hi! I'm Emanuele<br><span class="accent">Front-end Developer</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quod quisquam, incidunt fuga eligendi esse totam officiis, dolor illo eum rerum veritatis eos aliquid a commodi. Nulla ullam aperiam et.</p>
+            <div class="btn-section">
+                <button class="btn">Learn more</button>
+                <button class="btn">See my Projects</button>
+            </div>
+            </div>
         </div>
-        <div class="hero-img">
-          <img class="img1" src="img/laptop.png" alt="">
-        </div>          
-      </div>
+
         
-      
-
-      <div id="about" class="section light-theme">
-        <div class="about-section">
-          <h2 class="title">about</h2>
-          <p>Before land in IT I've experienced different jobs in retail and hospitality, in Italy and Australia, and while I was developing crucial soft-skills or receiving positive results, I didn't feel on the right path.
+        <div id="about" class="section section-about">
+            <h2>about</h2>
+            <p>Before land in IT I've experienced different jobs in retail and hospitality, in Italy and Australia, and while I was developing crucial soft-skills or receiving positive results, I didn't feel on the right path.
             <br>
-            <br>
-          An intense Bootcamp that I attent in 2022 opened my eyes on this beautiful world, and since then I've been study and train to became a great Web Developer.
-          </p>
+            An intense Bootcamp that I attent in 2022 opened my eyes on this beautiful world, and since then I've been study and train to became a great Web Developer.
+            </p>
         </div>
-      </div>
+        
+        <div class="section section-projects">
 
-      <div class="icons section dark-theme">
-        <p>STACK</p>
-        <ul class="unstyled-list">
-          <li><i class="fa-brands fa-html5"></i>
-          <p>Html5</p></li>
-          <li><i class="fa-brands fa-css3-alt"></i>
-          <p>CSS</p></li>
-          <li><i class="fa-brands fa-square-js"></i>
-          <p>Javascript</p></li>
-          <li><i class="fa-brands fa-bootstrap"></i>
-          <p>Bootstrap</p></li>
-          <li><i class="fa-brands fa-sass"></i>
-          <p>Sass</p></li>
-          <li><i class="fa-brands fa-react"></i>
-          <p>React</p></li>
-          <li><i class="fa-solid fa-database"></i>
-          <p>MySQL</p></li>
-          <li><i class="fa-brands fa-php"></i>
-          <p>PHP</p></li>
-          <li><i class="fa-brands fa-git-alt"></i>
-          <p>Git</p></li>
-          <li><i class="fa-brands fa-github"></i>
-            <p>GitHub</p></li>
-          <li><i class="fa-brands fa-ubuntu"></i>
-          <p>Ubuntu</p></li>
-          <li><i class="fa-brands fa-windows"></i>
-          <p>Windows</p></li>
-        </ul>
-      </div>
-
-      <div id="projects" class="section projects-section light-theme">
-        <h2 class="title">Projects</h2>
-        <div class="grid">
-          <div class="grid-item">
-            <h3>Landing Page</h3>
-            <p>Responsive and slick webpage</p>
-            <img src="">
-            <ul class="unstyled-list">
-              <li><i class="fa-brands fa-html5"></i></li>
-              <li><i class="fa-brands fa-css3-alt"></i></li>
-              <li><i class="fa-brands fa-bootstrap"></i></li>
-              <li><i class="fa-brands fa-square-js"></i></li>
-            </ul>
-          </div>
-          <div class="grid-item">
-            <h3>Bug tracker</h3>
-            <p>a usefull app to help your team</p>
-            <img src="">
-            <ul class="unstyled-list">
-              <li><i class="fa-brands fa-html5"></i></li>
-              <li><i class="fa-brands fa-css3-alt"></i></li>
-              <li><i class="fa-brands fa-square-js"></i></li>
-              <li><i class="fa-brands fa-php"></i></li>
-              <li><i class="fa-solid fa-database"></i></li>
-            </ul>
-          </div>
-          <div class="grid-item">
-            <h3>App next</h3>
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <img src="">
-            <ul class="unstyled-list">
-              <li><i class="fa-brands fa-html5"></i></li>
-              <li><i class="fa-brands fa-css3-alt"></i></li>
-              <li><i class="fa-brands fa-sass"></i></li>
-              <li><i class="fa-brands fa-square-js"></i></li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <div id="contact" class="section contact-section dark-theme">
-        <h2 class="title">Contact Me</h2>
-      </div>
-      </div>
+
     </div>
-  </div>
-    <footer class="dark-theme"></footer>
     <script src="js/app.js"></script>
-  </body>
+</body>
 </html>
