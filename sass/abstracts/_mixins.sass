@@ -1,3 +1,4 @@
+// Breakpoints
 =media-query($break-point)
     @if $break-point==xs
         @media ( max-width: 480px)
@@ -6,5 +7,8 @@
         @media ( max-width: 800px)
             @content
     @if $break-point==lg
-        @media ( max-width: 1250px)
+        @media ( max-width: 1000px)
+            @content
+    @if $break-point==xl
+        @media ( max-width: 1400px)
             @content

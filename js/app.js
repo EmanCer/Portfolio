@@ -1,14 +1,5 @@
 "use strict";
 
-// const btnToggle = document.querySelector(".nav-toggle");
-// const navBar = document.querySelector(".nav-bar");
-// const hamburger = document.querySelector(".hamburger");
-
-// btnToggle.addEventListener("click", function () {
-// 	navBar.classList.toggle("active");
-// 	hamburger.classList.toggle("is-open");
-// 	console.log("clicked");
-// });
 const languagesFlags = document.querySelectorAll(".lang");
 const toggleBtn = document.querySelector(".toggle-btn").firstChild;
 const mainNav = document.querySelector(".main-nav");

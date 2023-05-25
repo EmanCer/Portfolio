@@ -1,0 +1,85 @@
+.navbar
+    width: 100%
+    height: 100px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .nav-link
+        position: relative
+        text-transform: uppercase
+    .nav-link:after
+        content: ''
+        position: absolute
+        background-color: $secondary
+        height: 3px
+        width: 0
+        left: 0
+        bottom: -.5em
+        transition: all 0.8s
+    .nav-link:hover
+        color: $secondary
+    .nav-link:hover:after
+        width: 100%
+        transition: all 0.8s
+        color: $secondary
+    .links
+        display: flex
+        gap: 2rem
+        li
+            list-style: none
+    @include media-query(md)
+        .main-nav
+            opacity: 0
+            position: absolute
+            top: 4rem
+            left: 50%
+            width: 300px
+            height: 250px
+            margin-left: -150px
+            background: $primary-blur
+            backdrop-filter: blur(15px)
+            border-radius: 10px
+        .open
+            opacity: 1
+            .links
+                width: 100%
+                height: 100%
+                flex-direction: column
+                justify-content: center
+            li
+                display: flex
+                align-items: center
+                justify-content: center
+    .languages
+        display: flex
+        justify-content: space-evenly
+        width: 100px
+        .lang
+            content: ''
+            display: block
+            width: 2rem
+            height: 2rem
+            border: solid $light-primary 2px
+            border-radius: 50%
+            background-size: cover
+            background-position: 50%
+            background-repeat: no-repeat
+            transition: scale 0.5s
+        .lang:hover
+            scale: 1.20
+        .it-lang
+            background-image: url(https://www.worldometers.info/img/flags/it-flag.gif)
+        .en-lang
+            background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif)
+        .selected-lang
+            border: solid $secondary 3px
+    .toggle-btn
+        color: $secondary
+        font-size: 1.2rem
+        cursor: pointer
+        display: none
+        @include media-query(md)
+            position: absolute
+            left: 49%
+            display: block

@@ -1,0 +1,38 @@
+*
+    //font-family: 'Poppins', sans-serif
+    font-family: 'Quicksand', sans-serif
+
+// Typography Header / Navbar
+.logo > a
+    color: $secondary
+    font-size: 2.2rem
+    letter-spacing: 2px
+    @include media-query(md)
+        font-size: 1.5rem
+
+.nav-link
+    text-decoration: none
+    color: $light-primary
+    font-size: 1.5rem
+    letter-spacing: 5px
+    padding: 0 15px
+    @include media-query(xl)
+        font-size: 1.3rem
+        letter-spacing: 5px
+        padding: 0 10px
+    @include media-query(lg)
+        font-size: 1.2rem
+        letter-spacing: 2px
+        padding: 0 5px
+    @include media-query(md)
+
+// Typography Hero
+.hero-text > h1
+    font-size: 3.5rem
+    letter-spacing: 3px
+    @include media-query (xl)
+        font-size: 3rem
+        letter-spacing: 2px
+    @include media-query (lg)
+        font-size: 2.5rem
+        letter-spacing: 1px
