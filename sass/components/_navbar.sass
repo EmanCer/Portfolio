@@ -30,7 +30,6 @@
             list-style: none
     @include media-query(md)
         .main-nav
-            opacity: 0
             position: absolute
             top: 4rem
             left: 50%
@@ -40,8 +39,7 @@
             background: $primary-blur
             backdrop-filter: blur(15px)
             border-radius: 10px
-        .open
-            opacity: 1
+            transform: translateY(-150%)
             .links
                 width: 100%
                 height: 100%
@@ -51,6 +49,10 @@
                 display: flex
                 align-items: center
                 justify-content: center
+        .open
+            transform: translateY(0)
+            transition: all 0.5s ease
+
     .languages
         display: flex
         justify-content: space-evenly
@@ -69,9 +71,9 @@
         .lang:hover
             scale: 1.20
         .it-lang
-            background-image: url(https://www.worldometers.info/img/flags/it-flag.gif)
+            background-image: url(/img/italy-flag.png)
         .en-lang
-            background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif)
+            background-image: url(/img/uk-flag.jpg)
         .selected-lang
             border: solid $secondary 3px
     .toggle-btn

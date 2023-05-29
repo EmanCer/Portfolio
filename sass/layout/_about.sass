@@ -1,0 +1,30 @@
+.section-about
+    text-align: center
+    color: $text-inverse
+    p
+        font-size: 1.5rem
+        margin: 0 auto
+        width: 80%
+        @include media-query (lg)
+            font-size: 1.2rem
+        @include media-query (md)
+            font-size: 1rem
+    .stack-icon-container
+        display: flex
+        justify-content: space-evenly
+        margin: 3rem auto
+        .stack-icon
+            list-style: none
+            width: 90%
+            font-size: 2rem
+            display: grid
+            gap: 1rem
+            grid-template-columns: repeat(9, 1fr)
+            @include media-query(xl)
+                grid-template-columns: repeat(4, 1fr)
+            @include media-query(lg)
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+                gap: 2rem
+            p
+                font-size: 0.9rem
+                padding-top: 10px

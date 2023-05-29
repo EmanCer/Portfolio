@@ -1,0 +1,59 @@
+.form-container
+    width: 60%
+    margin: 0 auto
+    color: white
+    border: solid 3px $secondary
+    border-radius: 5px
+    background-color: $primary-blur
+    padding: 40px
+    @include media-query(lg)
+        width: 80%
+        padding: 25px
+    form
+        display: flex
+        flex-direction: column
+        font-size: 1.3rem
+        @include media-query(xl)
+            font-size: 1rem
+        input, label, textarea
+            margin-top: 2rem
+            border-radius: 5px
+            padding: 10px
+            @include media-query(lg)
+                margin-top: 0
+        input, textarea
+            background-color: $primary
+            border: 1px solid $secondary
+        textarea
+            height: 200px
+        #fName, #sName
+            height: 3rem
+        .form-btn
+            width: 40%
+            margin: 2rem auto
+            padding: 1.3rem 0
+            font-size: 1.2rem
+            @include media-query(lg)
+                width: 80%
+                font-size: 1rem
+
+.footer-container
+    background: $primary
+    height: 20vh
+    width: 100%
+    ul
+        height: 100%
+        width: 80%
+        margin: auto
+        display: flex
+        justify-content: center
+        align-items: center
+        list-style: none
+        li
+            font-size: 2rem
+            color: $secondary
+            padding: 1.5rem
+            @include media-query(lg)
+                font-size: 1.5rem
+            @include media-query(sm)
+                overflow: hidden
