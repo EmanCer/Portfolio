@@ -1,7 +1,10 @@
 .section-projects
     text-align: center
+    margin-top: 2rem
     .projects-list
-        display: flex
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr
         justify-content: space-around
         overflow: hidden
         @include media-query(xl)
@@ -10,17 +13,14 @@
             display: block
         .project-card
             background-color: transparent
-            width: 33.3%
+            width: 80%
             height: 400px
-            perspective: 1000px
-            padding: 2rem
+            perspective: 1500px
+            padding: 2rem 0
+            margin: 0 auto
             @include media-query(lg)
-                width: 50%
-                height: 300px
+                height: 400px
             @include media-query(md)
-                width: 80%
-                margin: 0 auto
-                height: 300px
             .project-card-inner
                 position: relative
                 width: 100%
