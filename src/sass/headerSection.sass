@@ -1,0 +1,77 @@
+header
+  width: 100%
+  height: 100px
+  padding: 0 1rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: fixed
+  z-index: 10
+  background: $primary
+  opacity: 0.9
+  .logo
+    font-size: 2.5rem
+    padding: 1rem
+    border: 5px solid $accent
+    border-radius: 50%
+    z-index: 11
+  .navBar 
+    ul
+      display: flex
+      align-items: center
+      justify-content: space-evenly
+      font-size: 1.8rem
+      li a
+        color: $accent
+        &:hover
+          color: $secondary
+    .asideNavBar 
+      button
+        font-size: 3rem
+        color: $accent
+        border: none
+        background: transparent
+        z-index: 10
+        position: relative
+        cursor: pointer
+      aside
+        position: fixed
+        top: -500px
+        bottom: 0
+        right: 0
+        width: 100%
+        height: 500px
+        background: $primary
+        opacity: 0.9
+        z-index: 9
+        display: flex
+        align-items: center
+        transition: top 0.2s ease
+        ul
+          flex-flow: column wrap
+          height: 50%
+          
+          width: 100%
+      aside.open 
+        top: 0
+    .mainNavBar
+      ul
+        width: 80%
+@include media-query(md)
+  header
+    padding: 0 3rem
+    .navBar
+      width: 70%
+      .mainNavBar ul
+        width: 100%
+        justify-content: space-between
+@include media-query(xl)
+  header .navBar
+    width: 60%
+    .mainNavBar ul
+      font-size: 2.2rem
+@include media-query(xxl)
+  header .navBar
+    width: 40%
+    .mainNavBar ul
+      font-size: 2.4rem

@@ -1,0 +1,59 @@
+// Colors
+$primary: #f7f7f7
+$secondary: #305474
+$accent: #e67c20
+
+// Font
+$urbanist: "Urbanist",sans-serif
+$graduate: 'Graduate', serif
+$ojuju: 'Ojuju', sans-serif
+
+// General Layout
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body
+  font-size: 1.5rem
+  font-family: $urbanist
+  color: $secondary
+  background: $primary
+  .container
+    width: 100%
+
+main
+  transition: filter 0.5s ease
+  &.blur
+    filter: blur(2rem)
+h3
+  margin: 5rem
+
+a
+  color: $accent
+  text-decoration: none
+
+ul
+  list-style: none
+
+.accent
+  color: $accent
+
+.btn
+  display: block
+  margin: 7rem auto 0
+  padding: 2rem 3rem
+  border: 2px solid $accent
+  border-radius: 5px
+  background: transparent
+  color: $secondary
+  font-size: 2rem
+  transition: all 0.2s ease-in-out
+  &:hover
+    background: $secondary
+    color: $accent
+  &:active
+    transform: translateY(4px)

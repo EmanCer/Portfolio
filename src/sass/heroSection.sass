@@ -1,0 +1,65 @@
+.hero
+    width: 90%
+    margin: 0 auto
+    height: 100dvh
+    min-height: 500px
+    transition: filter 5s ease
+    display: flex
+    align-items: center
+    p
+      font-size: 2.5rem
+    h1
+      font-size:3.8rem
+      margin: 2rem 0 0.5rem 0rem
+    h2
+      font-size: 3rem
+      margin-bottom: 4rem
+    .heroDescription
+      font-size: 2rem
+      line-height: 3rem
+@include media-query(md)
+  .hero
+    width: 80%
+    h1
+      font-size:4rem
+    h2
+      font-size: 3.4rem
+    .heroDescription
+      font-size: 2.2rem
+@include media-query(xl)
+  .hero
+    width: 90%
+    .heroLeft
+      width: 60%
+      h1
+        font-size:5rem
+      h2
+        font-size: 3.6rem
+      .heroDescription
+        font-size: 2.5rem
+    .heroRight
+      width: 40%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      .heroImg
+        background: $accent
+        width: 60%
+        height: 60%
+        box-shadow: 0 5px 15px $accent
+        animation: animate 10s ease infinite
+        transition: all 1s ease
+
+@keyframes animate
+  0%
+    border-radius: 30% 70% 40% 60% / 60% 30% 70% 40%
+  25%
+    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%
+  50%
+    border-radius: 70% 30% 60% 40% / 30% 60% 40% 70%
+  75%
+    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%
+  100%
+    border-radius: 30% 70% 40% 60% / 60% 30% 70% 40%
+

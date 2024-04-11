@@ -1,0 +1,25 @@
+=media-query($break-point)
+    // smartphones - Iphones
+    @if $break-point==xs
+        @media ( max-width: 320px)
+            @content
+    // portrait e-readers - small tablets
+    @if $break-point==sm
+        @media ( min-width: 481px)
+            @content
+    // portrait tablets - Ipad
+    @if $break-point==md
+        @media ( min-width: 641px)
+            @content
+    // tablet - landscape Ipaad
+    @if $break-point==lg
+        @media ( min-width: 961px)
+            @content
+    // big tablets - Laptops
+    @if $break-point==xl
+        @media ( min-width: 1025px)
+            @content
+    // big Laptops and desktops
+    @if $break-point==xxl
+        @media ( min-width: 1281px)
+            @content
