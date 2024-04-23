@@ -6,7 +6,9 @@ function ProjectCard({ pic, title, description, gitHubLink, liveLink }) {
   return (
     <div className="project">
       <div className="projectImg">
-        <img src={pic} alt={title + " project thumbnail"} />
+        <a href={liveLink} target="_blank">
+          <img src={pic} alt={title + " project thumbnail"} />
+        </a>
       </div>
       <div className="projectDescription">
         <h4>{title}</h4>
